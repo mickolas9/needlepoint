@@ -199,6 +199,7 @@
 .card__item--prismatic-rgb {
   background-color: var(--color-prismatic-rgb);
 }
+
 .circle {
   position: absolute;
   top: 50%;
@@ -290,6 +291,7 @@
     background-position: 0% 50%;
   }
 }
+
 /* #endregion */
 
 /* #region Monochromatic */
@@ -337,6 +339,7 @@
     transform: rotate(360deg);
   }
 }
+
 /* #endregion */
 
 /* #region Iridescence */
@@ -490,6 +493,7 @@
     transform: perspective(100px) rotateY(360deg) rotateX(360deg);
   }
 }
+
 /* #endregion */
 
 /* #region Gold-Silver-Metallic */
@@ -522,6 +526,7 @@
   transform: rotate(360deg);
   /* Rotate upon hover */
 }
+
 /* #endregion */
 
 /* #region Shadow */
@@ -541,6 +546,7 @@
 .card__item--mosaic:hover {
   filter: hue-rotate(90deg);
 }
+
 /* #endregion */
 
 /* #region Glitch */
@@ -555,6 +561,7 @@
 }
 
 @keyframes glitchEffect {
+
   0%,
   100% {
     background-position: 0 0, 0 0, 33px 58px, 33px 58px, 0 0, 33px 58px;
@@ -618,6 +625,7 @@
 }
 
 @-webkit-keyframes blink {
+
   20%,
   24%,
   55% {
@@ -640,6 +648,7 @@
 }
 
 @keyframes blink {
+
   20%,
   24%,
   55% {
@@ -660,6 +669,7 @@
     color: #fff6a9;
   }
 }
+
 /* #endregion */
 
 /* #region Solar-Lunar */

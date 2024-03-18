@@ -17,107 +17,82 @@
   --color-gold: #ffd700;
   --color-silver: #c0c0c0;
   --color-shadow: #778899;
-  --color-neon: repeating-linear-gradient(
-    to bottom,
-    transparent 7px,
-    rgba(0, 0, 0, 0.8) 9px,
-    rgba(0, 0, 0, 0.8) 13px,
-    transparent 13px
-  );
+  --color-neon: repeating-linear-gradient(to bottom,
+      transparent 7px,
+      rgba(0, 0, 0, 0.8) 9px,
+      rgba(0, 0, 0, 0.8) 13px,
+      transparent 13px);
   --color-stars: radial-gradient(2px 2px at 20px 30px, #eee, rgba(0, 0, 0, 0)),
     radial-gradient(2px 2px at 40px 70px, #fff, rgba(0, 0, 0, 0)),
     radial-gradient(2px 2px at 50px 160px, #ddd, rgba(0, 0, 0, 0)),
     radial-gradient(2px 2px at 90px 40px, #fff, rgba(0, 0, 0, 0)),
     radial-gradient(2px 2px at 130px 80px, #fff, rgba(0, 0, 0, 0)),
     radial-gradient(2px 2px at 160px 120px, #ddd, rgba(0, 0, 0, 0));
-  --color-glitch: linear-gradient(
-      30deg,
+  --color-glitch: linear-gradient(30deg,
       #ff0000 12%,
       transparent 12.5%,
       transparent 87%,
       #ff0000 87.5%,
-      #ff0000
-    ),
-    linear-gradient(
-      150deg,
+      #ff0000),
+    linear-gradient(150deg,
       #ff0000 12%,
       transparent 12.5%,
       transparent 87%,
       #ff0000 87.5%,
-      #ff0000
-    ),
-    linear-gradient(
-      30deg,
+      #ff0000),
+    linear-gradient(30deg,
       #ff0000 12%,
       transparent 12.5%,
       transparent 87%,
       #ff0000 87.5%,
-      #ff0000
-    ),
-    linear-gradient(
-      150deg,
+      #ff0000),
+    linear-gradient(150deg,
       #ff0000 12%,
       transparent 12.5%,
       transparent 87%,
       #ff0000 87.5%,
-      #ff0000
-    ),
-    linear-gradient(
-      60deg,
+      #ff0000),
+    linear-gradient(60deg,
       #ff000077 25%,
       transparent 25.5%,
       transparent 75%,
       #ff000077 75%,
-      #ff000077
-    ),
-    linear-gradient(
-      60deg,
+      #ff000077),
+    linear-gradient(60deg,
       #ff000077 25%,
       transparent 25.5%,
       transparent 75%,
       #ff000077 75%,
-      #ff000077
-    );
+      #ff000077);
   --color-red: #ff0000;
   --color-blue: #0000ff;
   --color-sun: #ffff11;
   --color-box: linear-gradient(325deg, #3f5efb, #fc466b);
   --color-grid-item: rgba(0, 0, 0, 0.2);
-  --color-mosaic: repeating-linear-gradient(
-    45deg,
-    #ff8400,
-    #ff8400 15px,
-    #9d00ff 15px,
-    #9d00ff 25px
-  );
-  --color--monochrome-gradient: linear-gradient(
-      135deg,
+  --color-mosaic: repeating-linear-gradient(45deg,
+      #ff8400,
+      #ff8400 15px,
+      #9d00ff 15px,
+      #9d00ff 25px);
+  --color--monochrome-gradient: linear-gradient(135deg,
       #ffffff 25%,
-      transparent 25%
-    ),
+      transparent 25%),
     linear-gradient(225deg, #ffffff 25%, transparent 25%),
     linear-gradient(45deg, #ffffff 25%, transparent 25%),
     linear-gradient(315deg, #ffffff 25%, #000000 25%);
-  --color-monochrome-rings: repeating-radial-gradient(
-      rgba(228, 228, 228, 0) 0,
+  --color-monochrome-rings: repeating-radial-gradient(rgba(228, 228, 228, 0) 0,
       rgba(228, 228, 228, 0) 23px,
       rgba(228, 228, 228, 0.05) 25px,
-      rgba(228, 228, 228, 0) 27px
-    ),
-    repeating-radial-gradient(
-      rgba(166, 166, 166, 0) 0,
+      rgba(228, 228, 228, 0) 27px),
+    repeating-radial-gradient(rgba(166, 166, 166, 0) 0,
       rgba(166, 166, 166, 0) 13px,
       rgba(166, 166, 166, 0.05) 15px,
-      rgba(166, 166, 166, 0) 17px
-    ),
-    repeating-radial-gradient(
-      rgba(139, 139, 139, 0) 0,
+      rgba(166, 166, 166, 0) 17px),
+    repeating-radial-gradient(rgba(139, 139, 139, 0) 0,
       rgba(139, 139, 139, 0) 19px,
       rgba(139, 139, 139, 0.05) 21px,
-      rgba(139, 139, 139, 0) 23px
-    ),
-    conic-gradient(
-      from 0deg,
+      rgba(139, 139, 139, 0) 23px),
+    conic-gradient(from 0deg,
       #b5b5b5,
       #8d8d8d,
       #838383,
@@ -141,13 +116,10 @@
       #a8a8a8,
       #d5d5d5,
       #dedede,
-      #b5b5b5
-    );
-  --color-glassreflection-gradient: radial-gradient(
-      at 76% 14%,
+      #b5b5b5);
+  --color-glassreflection-gradient: radial-gradient(at 76% 14%,
       hsla(164, 78%, 73%, 1) 0px,
-      transparent 50%
-    ),
+      transparent 50%),
     radial-gradient(at 96% 15%, hsla(21, 68%, 72%, 1) 0px, transparent 50%),
     radial-gradient(at 96% 27%, hsla(168, 72%, 74%, 1) 0px, transparent 50%),
     radial-gradient(at 66% 72%, hsla(358, 72%, 61%, 1) 0px, transparent 50%),

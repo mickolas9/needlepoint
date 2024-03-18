@@ -19,8 +19,10 @@
   /* Ensure it's visible against the background */
   z-index: 2;
   /* Above the grid items but below the hovered item */
-  transition: none !important; /* Override any hover transitions */
-  transform: none !important; /* Ensure it doesn't move or scale */
+  transition: none !important;
+  /* Override any hover transitions */
+  transform: none !important;
+  /* Ensure it doesn't move or scale */
 }
 
 /* New class to make the text visible and animate it */
@@ -43,8 +45,10 @@ h1 {
   margin: 0;
   padding: 0;
   color: #ffffff;
-  transition: none !important; /* Override any hover transitions */
-  transform: none !important; /* Ensure it doesn't move or scale */
+  transition: none !important;
+  /* Override any hover transitions */
+  transform: none !important;
+  /* Ensure it doesn't move or scale */
 }
 
 h2 {
@@ -56,8 +60,10 @@ h2 {
   margin: 0;
   padding: 0;
   color: #ffffff;
-  transition: none !important; /* Override any hover transitions */
-  transform: none !important; /* Ensure it doesn't move or scale */
+  transition: none !important;
+  /* Override any hover transitions */
+  transform: none !important;
+  /* Ensure it doesn't move or scale */
 }
 
 p {
@@ -69,8 +75,10 @@ p {
   margin: 0;
   padding: 1em;
   color: #fff;
-  transition: none !important; /* Override any hover transitions */
-  transform: none !important; /* Ensure it doesn't move or scale */
+  transition: none !important;
+  /* Override any hover transitions */
+  transform: none !important;
+  /* Ensure it doesn't move or scale */
 }
 
 /* #endregion */

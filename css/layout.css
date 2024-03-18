@@ -1,11 +1,11 @@
 /* #region Base Layout */
 .grid {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    300px
-  ); /* Adjust based on your design */
-  grid-auto-rows: 300px; /* Adjust based on your design */
+  grid-template-columns: repeat(auto-fill,
+      300px);
+  /* Adjust based on your design */
+  grid-auto-rows: 300px;
+  /* Adjust based on your design */
   grid-gap: 15px;
   padding-top: 15px;
   grid-auto-flow: dense;
@@ -25,40 +25,56 @@ body {
 
 .grid__item-card--triple,
 .grid__item-card--triple * {
-  transition: none !important; /* Override any hover transitions */
-  transform: none !important; /* Ensure it doesn't move or scale */
+  transition: none !important;
+  /* Override any hover transitions */
+  transform: none !important;
+  /* Ensure it doesn't move or scale */
 }
 
 .header__description {
-  text-align: justify; /* Justify text for even alignment on both sides */
-  transition: none !important; /* Override any hover transitions */
-  transform: none !important; /* Ensure it doesn't move or scale */
+  text-align: justify;
+  /* Justify text for even alignment on both sides */
+  transition: none !important;
+  /* Override any hover transitions */
+  transform: none !important;
+  /* Ensure it doesn't move or scale */
 }
 
 .header__description p {
-  transition: none !important; /* Override any hover transitions */
-  transform: none !important; /* Ensure it doesn't move or scale */
+  transition: none !important;
+  /* Override any hover transitions */
+  transform: none !important;
+  /* Ensure it doesn't move or scale */
 }
 
 .header__description:hover {
-  text-align: justify; /* Justify text for even alignment on both sides */
-  transition: none !important; /* Override any hover transitions */
-  transform: none !important; /* Ensure it doesn't move or scale */
+  text-align: justify;
+  /* Justify text for even alignment on both sides */
+  transition: none !important;
+  /* Override any hover transitions */
+  transform: none !important;
+  /* Ensure it doesn't move or scale */
 }
 
 .header__description:hover p {
-  transition: none !important; /* Override any hover transitions */
-  transform: none !important; /* Ensure it doesn't move or scale */
+  transition: none !important;
+  /* Override any hover transitions */
+  transform: none !important;
+  /* Ensure it doesn't move or scale */
 }
 
 .header {
-  transition: none !important; /* Override any hover transitions */
-  transform: none !important; /* Ensure it doesn't move or scale */
+  transition: none !important;
+  /* Override any hover transitions */
+  transform: none !important;
+  /* Ensure it doesn't move or scale */
 }
 
 .grid__item p {
-  transition: none !important; /* Override any hover transitions */
-  transform: none !important; /* Ensure it doesn't move or scale */
+  transition: none !important;
+  /* Override any hover transitions */
+  transform: none !important;
+  /* Ensure it doesn't move or scale */
 }
 
 /* #endregion */
@@ -83,8 +99,7 @@ body {
   bottom: -50%;
   width: 200%;
   height: 200vh;
-  background: transparent
-    url("http://assets.iceable.com/img/noise-transparent.png") repeat 0 0;
+  background: transparent url("http://assets.iceable.com/img/noise-transparent.png") repeat 0 0;
   background-repeat: repeat;
   animation: bg-animation 1s infinite;
   opacity: 1;
@@ -96,35 +111,46 @@ body {
   0% {
     transform: translate(0, 0);
   }
+
   10% {
     transform: translate(-5%, -5%);
   }
+
   20% {
     transform: translate(-10%, 5%);
   }
+
   30% {
     transform: translate(5%, -10%);
   }
+
   40% {
     transform: translate(-5%, 15%);
   }
+
   50% {
     transform: translate(-10%, 5%);
   }
+
   60% {
     transform: translate(15%, 0);
   }
+
   70% {
     transform: translate(0, 10%);
   }
+
   80% {
     transform: translate(-15%, 0);
   }
+
   90% {
     transform: translate(10%, 5%);
   }
+
   100% {
     transform: translate(5%, 0);
   }
 }
+
 /* #endregion */
