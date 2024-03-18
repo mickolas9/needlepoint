@@ -941,32 +941,41 @@ function normalizeColor(hexCode) {
 //   });
 // });
 
+
 document.addEventListener('DOMContentLoaded', function() {
   const gridItems = document.querySelectorAll('.grid__item-card');
 
   gridItems.forEach(item => {
     const itemName = item.querySelector('.card__item-name');
-    const originalText = itemName.textContent; // Capture the original text
+    const originalText = itemName.textContent.trim(); // Ensure to trim any whitespace
 
-    item.addEventListener('mouseenter', function() {
-      // Show the itemName and prepare it for marquee effect
-      itemName.classList.add('marquee-visible');
-      itemName.textContent = originalText.repeat(50); // Adjust repetition for continuous effect
-
-      // Apply a simple animation to scroll the text
-      itemName.animate([
-        { transform: 'translateX(0)' },
-        { transform: 'translateX(-100%)' }
+    item.addEventListener('mouseenter', function(e) {
+      // Make the item name visible and set it for marquee
+      itemName.style.visibility = 'visible';
+      itemName.innerHTML = `<span>${originalText.repeat(20)}</span>`; // Repeating text for marquee effect
+      
+      // Animate for marquee effect
+      const animation = itemName.animate([
+        { transform: 'translateX(100%)' }, // Start from right
+        { transform: 'translateX(-100%)' } // End to the left
       ], {
-        duration: 20000, // Duration to control the speed of the marquee
+        duration: 15000, // Duration of the marquee animation
         iterations: Infinity
       });
+
+      // Adjust z-index to ensure it's behind the hovered item
+      itemName.style.zIndex = '0';
+      item.style.zIndex = '1'; // Bring the hovered item to the front
     });
 
     item.addEventListener('mouseleave', function() {
-      // Hide the itemName and stop the marquee effect
-      itemName.classList.remove('marquee-visible');
-      itemName.textContent = originalText; // Reset to original text
+      // Hide the item name again and reset styles
+      itemName.style.visibility = 'hidden';
+      itemName.innerHTML = originalText; // Reset to original text
+      item.style.zIndex = '0'; // Reset z-index of the item
+
+      // Optional: cancel the animation if it's not supposed to finish
+      animation.cancel();
     });
   });
 });

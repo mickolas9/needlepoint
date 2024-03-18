@@ -1,8 +1,8 @@
 :root {
- --gradient-color-1: #2d3e50;
- --gradient-color-2: #ff0000;
- --gradient-color-3: #ff009d;
- --gradient-color-4: #0055ff;
+  --gradient-color-1: #2d3e50;
+  --gradient-color-2: #ff0000;
+  --gradient-color-3: #ff009d;
+  --gradient-color-4: #0055ff;
   --color-glass-reflection: #9999ff;
   --color-vantablack: #000000;
   --color-prismatic-rgb: #000000;
@@ -24,64 +24,60 @@
     rgba(0, 0, 0, 0.8) 13px,
     transparent 13px
   );
-  --color-stars: radial-gradient(
-    2px 2px at 20px 30px,
-    #eee,
-    rgba(0, 0, 0, 0)
-  ),
-  radial-gradient(2px 2px at 40px 70px, #fff, rgba(0, 0, 0, 0)),
-  radial-gradient(2px 2px at 50px 160px, #ddd, rgba(0, 0, 0, 0)),
-  radial-gradient(2px 2px at 90px 40px, #fff, rgba(0, 0, 0, 0)),
-  radial-gradient(2px 2px at 130px 80px, #fff, rgba(0, 0, 0, 0)),
-  radial-gradient(2px 2px at 160px 120px, #ddd, rgba(0, 0, 0, 0));
+  --color-stars: radial-gradient(2px 2px at 20px 30px, #eee, rgba(0, 0, 0, 0)),
+    radial-gradient(2px 2px at 40px 70px, #fff, rgba(0, 0, 0, 0)),
+    radial-gradient(2px 2px at 50px 160px, #ddd, rgba(0, 0, 0, 0)),
+    radial-gradient(2px 2px at 90px 40px, #fff, rgba(0, 0, 0, 0)),
+    radial-gradient(2px 2px at 130px 80px, #fff, rgba(0, 0, 0, 0)),
+    radial-gradient(2px 2px at 160px 120px, #ddd, rgba(0, 0, 0, 0));
   --color-glitch: linear-gradient(
-    30deg,
-    #ff0000 12%,
-    transparent 12.5%,
-    transparent 87%,
-    #ff0000 87.5%,
-    #ff0000
-  ),
-  linear-gradient(
-    150deg,
-    #ff0000 12%,
-    transparent 12.5%,
-    transparent 87%,
-    #ff0000 87.5%,
-    #ff0000
-  ),
-  linear-gradient(
-    30deg,
-    #ff0000 12%,
-    transparent 12.5%,
-    transparent 87%,
-    #ff0000 87.5%,
-    #ff0000
-  ),
-  linear-gradient(
-    150deg,
-    #ff0000 12%,
-    transparent 12.5%,
-    transparent 87%,
-    #ff0000 87.5%,
-    #ff0000
-  ),
-  linear-gradient(
-    60deg,
-    #ff000077 25%,
-    transparent 25.5%,
-    transparent 75%,
-    #ff000077 75%,
-    #ff000077
-  ),
-  linear-gradient(
-    60deg,
-    #ff000077 25%,
-    transparent 25.5%,
-    transparent 75%,
-    #ff000077 75%,
-    #ff000077
-  );
+      30deg,
+      #ff0000 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #ff0000 87.5%,
+      #ff0000
+    ),
+    linear-gradient(
+      150deg,
+      #ff0000 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #ff0000 87.5%,
+      #ff0000
+    ),
+    linear-gradient(
+      30deg,
+      #ff0000 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #ff0000 87.5%,
+      #ff0000
+    ),
+    linear-gradient(
+      150deg,
+      #ff0000 12%,
+      transparent 12.5%,
+      transparent 87%,
+      #ff0000 87.5%,
+      #ff0000
+    ),
+    linear-gradient(
+      60deg,
+      #ff000077 25%,
+      transparent 25.5%,
+      transparent 75%,
+      #ff000077 75%,
+      #ff000077
+    ),
+    linear-gradient(
+      60deg,
+      #ff000077 25%,
+      transparent 25.5%,
+      transparent 75%,
+      #ff000077 75%,
+      #ff000077
+    );
   --color-red: #ff0000;
   --color-blue: #0000ff;
   --color-sun: #ffff11;
@@ -94,55 +90,59 @@
     #9d00ff 15px,
     #9d00ff 25px
   );
-  --color--monochrome-gradient: linear-gradient(135deg, #ffffff 25%, transparent 25%),
-  linear-gradient(225deg, #ffffff 25%, transparent 25%),
-  linear-gradient(45deg, #ffffff 25%, transparent 25%),
-  linear-gradient(315deg, #ffffff 25%, #000000 25%);
+  --color--monochrome-gradient: linear-gradient(
+      135deg,
+      #ffffff 25%,
+      transparent 25%
+    ),
+    linear-gradient(225deg, #ffffff 25%, transparent 25%),
+    linear-gradient(45deg, #ffffff 25%, transparent 25%),
+    linear-gradient(315deg, #ffffff 25%, #000000 25%);
   --color-monochrome-rings: repeating-radial-gradient(
-    rgba(228, 228, 228, 0) 0,
-    rgba(228, 228, 228, 0) 23px,
-    rgba(228, 228, 228, 0.05) 25px,
-    rgba(228, 228, 228, 0) 27px
-  ),
-  repeating-radial-gradient(
-    rgba(166, 166, 166, 0) 0,
-    rgba(166, 166, 166, 0) 13px,
-    rgba(166, 166, 166, 0.05) 15px,
-    rgba(166, 166, 166, 0) 17px
-  ),
-  repeating-radial-gradient(
-    rgba(139, 139, 139, 0) 0,
-    rgba(139, 139, 139, 0) 19px,
-    rgba(139, 139, 139, 0.05) 21px,
-    rgba(139, 139, 139, 0) 23px
-  ),
-  conic-gradient(
-    from 0deg,
-    #b5b5b5,
-    #8d8d8d,
-    #838383,
-    #ababab,
-    #d7d7d7,
-    #e3e3e3,
-    #aeaeae,
-    #8f8f8f,
-    #878787,
-    #acacac,
-    #d7d7d7,
-    #dddddd,
-    #b8b8b8,
-    #8e8e8e,
-    #848484,
-    #a6a6a6,
-    #d8d8d8,
-    #e3e3e3,
-    #8e8e8e,
-    #868686,
-    #a8a8a8,
-    #d5d5d5,
-    #dedede,
-    #b5b5b5
-  );
+      rgba(228, 228, 228, 0) 0,
+      rgba(228, 228, 228, 0) 23px,
+      rgba(228, 228, 228, 0.05) 25px,
+      rgba(228, 228, 228, 0) 27px
+    ),
+    repeating-radial-gradient(
+      rgba(166, 166, 166, 0) 0,
+      rgba(166, 166, 166, 0) 13px,
+      rgba(166, 166, 166, 0.05) 15px,
+      rgba(166, 166, 166, 0) 17px
+    ),
+    repeating-radial-gradient(
+      rgba(139, 139, 139, 0) 0,
+      rgba(139, 139, 139, 0) 19px,
+      rgba(139, 139, 139, 0.05) 21px,
+      rgba(139, 139, 139, 0) 23px
+    ),
+    conic-gradient(
+      from 0deg,
+      #b5b5b5,
+      #8d8d8d,
+      #838383,
+      #ababab,
+      #d7d7d7,
+      #e3e3e3,
+      #aeaeae,
+      #8f8f8f,
+      #878787,
+      #acacac,
+      #d7d7d7,
+      #dddddd,
+      #b8b8b8,
+      #8e8e8e,
+      #848484,
+      #a6a6a6,
+      #d8d8d8,
+      #e3e3e3,
+      #8e8e8e,
+      #868686,
+      #a8a8a8,
+      #d5d5d5,
+      #dedede,
+      #b5b5b5
+    );
   --color-glassreflection-gradient: radial-gradient(
       at 76% 14%,
       hsla(164, 78%, 73%, 1) 0px,

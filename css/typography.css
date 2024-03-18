@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
 
+/* #region Type */
 .card__item-name {
   visibility: hidden;
   /* Start as hidden */
@@ -71,3 +72,5 @@ p {
   transition: none !important; /* Override any hover transitions */
   transform: none !important; /* Ensure it doesn't move or scale */
 }
+
+/* #endregion */
