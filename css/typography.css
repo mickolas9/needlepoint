@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
+
+.card__item-name {
+  visibility: hidden;
+  /* Start as hidden */
+  position: absolute;
+  /* Position it absolutely within the grid item */
+  width: 100%;
+  white-space: nowrap;
+  /* Essential for the marquee effect */
+  overflow: hidden;
+  /* Hide overflow to create a marquee */
+  pointer-events: none;
+  /* Allows clicks to pass through */
+  font-size: 16px;
+  /* Adjust as needed */
+  color: white;
+  /* Ensure it's visible against the background */
+  z-index: 2;
+  /* Above the grid items but below the hovered item */
+  transition: none !important; /* Override any hover transitions */
+  transform: none !important; /* Ensure it doesn't move or scale */
+}
+
+/* New class to make the text visible and animate it */
+.marquee-visible {
+  visibility: visible;
+  position: fixed;
+  top: 50%;
+  /* Adjust based on where you want it to appear */
+  left: 0;
+  transform: translateY(-50%);
+  width: 100vw;
+}
+
+h1 {
+  font-family: "area-normal", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 3em;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  transition: none !important; /* Override any hover transitions */
+  transform: none !important; /* Ensure it doesn't move or scale */
+}
+
+h2 {
+  font-family: "area-normal", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.5em;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  transition: none !important; /* Override any hover transitions */
+  transform: none !important; /* Ensure it doesn't move or scale */
+}
+
+p {
+  font-family: "area-normal", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1em;
+  text-align: center;
+  margin: 0;
+  padding: 1em;
+  color: #fff;
+  transition: none !important; /* Override any hover transitions */
+  transform: none !important; /* Ensure it doesn't move or scale */
+}

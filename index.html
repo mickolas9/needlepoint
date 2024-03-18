@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Infinite Scroll Grid</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="https://use.typekit.net/clc3qvw.css" />
+</head>
+
+<body>
+  <div class="bg"></div>
+  <div class="bg"></div>
+  <canvas id="gradient-canvas" data-js-darken-top data-transition-in></canvas>
+  <div class="grid" id="infinite-scroll">
+    <div class="grid__item-card grid__item-card--wide">
+      <div class="header">
+        <h1 class="header__title">A CSS Light & Colour Study</h1>
+        <p class="header__description">
+          A collection of CSS effects and animations. Hover to see more.
+        </p>
+      </div>
+    </div>
+    <div class="grid__item-card grid__item-card--tall">
+      <span class="card__item-name">Glass Reflection</span>
+      <div class="card__item card__item--glass-reflection"></div>
+    </div>
+    <div class="grid__item-card">
+      <span class="card__item-name">Neon</span>
+      <div class="card__item card__item--neon">
+        <div class="container-neon">
+          <h1 class="header-neon">0</h1>
+        </div>
+        <!-- <div class="neon__text">
+            <h2 class="neon__text">NEON</h2>
+          </div> -->
+      </div>
+    </div>
+    <div class="grid__item-card grid__item-card--double">
+      <span class="card__item-name">Depth</span>
+      <div class="card__item card__item--vantablack">
+        <div id="starfield">
+          <div class="stars"></div>
+          <div class="stars"></div>
+          <div class="stars"></div>
+          <div class="stars"></div>
+          <div class="stars"></div>
+        </div>
+      </div>
+    </div>
+    <div class="grid__item-card">
+      <span class="card__item-name">Reveal</span>
+      <div class="card__item card__item--prismatic-rgb">
+        <div class="container">
+          <div class="circle circle--1"></div>
+          <div class="circle circle--2"></div>
+          <div class="circle circle--3"></div>
+        </div>
+      </div>
+    </div>
+    <div class="grid__item-card">
+      <span class="card__item-name">Spectrum</span>
+      <div class="card__item card__item--gradient"></div>
+    </div>
+    <div class="grid__item-card">
+      <span class="card__item-name">Monochromatic</span>
+      <div class="card__item card__item--monochromatic"></div>
+    </div>
+    <div class="grid__item-card">
+      <span class="card__item-name">Solar Lunar</span>
+      <div class="card__item card__item--solar-lunar">
+        <div class="solar-lunar-container">
+          <div class="sun"></div>
+          <div class="moon">
+            <div class="moonspot moonspot1"></div>
+            <div class="moonspot moonspot2"></div>
+          </div>
+        </div>
+        <div class="cover"></div>
+      </div>
+    </div>
+    <div class="grid__item-card">
+      <span class="card__item-name">Iridescence Holographic</span>
+      <div class="card__item card__item--iridescence-holographic">
+        <div class="stained-glass">
+          <div class="glass-piece" style="--hue: 60"></div>
+          <div class="glass-piece" style="--hue: 120"></div>
+          <div class="glass-piece" style="--hue: 180"></div>
+          <div class="glass-piece" style="--hue: 240"></div>
+          <div class="glass-piece" style="--hue: 300"></div>
+          <div class="sun-stained-glass"></div>
+        </div>
+      </div>
+    </div>
+    <div class="grid__item-card grid__item-card--double">
+      <span class="card__item-name">Glitch</span>
+      <div class="card__item card__item--glitch"></div>
+    </div>
+    <div class="grid__item-card grid__item-card--double">
+      <span class="card__item-name">Perspective</span>
+      <div class="card__item card__item--perspective">
+        <div class="box"></div>
+      </div>
+    </div>
+    <div class="grid__item-card">
+      <span class="card__item-name">Gold Silver Metallic</span>
+      <div class="card__item card__item--gold-silver-metallic">
+        <div class="gradient-background"></div>
+      </div>
+    </div>
+    <div class="grid__item-card">
+      <span class="card__item-name">Shadow</span>
+      <div class="card__item card__item--shadow">
+        <div class="circleshadow circleshadow2"></div>
+      </div>
+    </div>
+    <div class="grid__item-card">
+      <span class="card__item-name">Mosaic</span>
+      <div class="card__item card__item--mosaic"></div>
+    </div>
+
+    <!-- <div class="grid__item-card">
+        <span class="card__item-name">Red Blue</span>
+        <div class="card__item card__item--red-blue"></div>
+      </div>
+    </div> -->
+    <div class="grid__item-card grid__item-card--triple">
+      <div class="header">
+        <h2 class="header__title">About this Project</h2>
+        <p class="header__description">
+          My concept revolves around creating a dynamic and interactive grid layout inspired by various emotional and
+          physical states or effects, such as nostalgia (neon), void (space), and transformation (prismatic RGB), among
+          others. The art direction focuses on exploring these states through color, light, and interactivity. The
+          design leans heavily into the realms of abstraction and interactivity, where each element on the page is not
+          just seen but experienced. Techniques featured include: CSS Grid
+          for responsive layout, CSS transitions for smooth animations, linear, radial, and conic gradients, 3D
+          transforms, blend modes and filters.
+        </p>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

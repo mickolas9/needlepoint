@@ -1,0 +1,762 @@
+.fade-out {
+  opacity: 0.1;
+  transition: opacity 0.5s ease;
+}
+
+.card__item {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  position: relative;
+  border-radius: 30px;
+  transition: all 0.5s ease;
+}
+
+.grid__item-card {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-grid-item);
+  backdrop-filter: blur(30px);
+  border-radius: 30px;
+  position: relative;
+  transition: ease 0.75s;
+}
+
+.grid__item-card--double {
+  grid-column: span 2;
+}
+
+/* Example for an item that spans 4 spaces (2x2) */
+.grid__item-card--quad {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.grid__item-card--wide {
+  grid-column: span 4;
+}
+
+.grid__item-card--tall {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.grid__item-card--triple {
+  grid-column: span 3;
+}
+
+/* .card__item-name {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  margin: 30px 0;
+  font-family: "area-normal", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  transition: opacity 0.25s ease;
+  mix-blend-mode: difference;
+} */
+
+.grid__item-card:hover {
+  padding: 0;
+}
+
+.grid__item-card:hover .card__item {
+  transform: scale(1);
+}
+
+.grid__item-card:hover .card__item-name {
+  opacity: 0;
+}
+
+.card__item--glass-reflection {
+  position: relative;
+  background-color: var(--color-glass-reflection);
+  overflow: hidden;
+}
+
+.card__item--glass-reflection::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  background-image: var(--color-glassreflection-gradient);
+  background-size: 200% 200%;
+  /* Larger to allow movement */
+  transition: background-position 0.5s ease;
+  width: 200%;
+  height: 200%;
+  transform: scale(0.5);
+  /* Scale back to fit container */
+  transform-origin: center;
+}
+
+.card__item--glass-reflection:hover::after {
+  background-position: 100% 100%;
+  /* Move background */
+}
+
+.card__item--vantablack {
+  background-color: var(--color-vantablack);
+  transition: transform 0.5s ease-in-out;
+}
+
+.card__item--prismatic-rgb {
+  background-color: var(--color-prismatic-rgb);
+}
+
+.card__item--gradient {
+  background: var(--color-gradient);
+  background-size: 400% 400%;
+  /* Define the animation but initially pause it */
+  animation: gradient 2s ease infinite;
+  animation-play-state: paused;
+  /* Animation is paused by default */
+}
+
+.card__item--gradient:hover {
+  /* Resume the animation on hover */
+  animation-play-state: running;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.card__item--monochromatic {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 1;
+  background-image: var(--color--monochrome-gradient);
+  background-position: 25px 0, 25px 0, 0 0, 0 0;
+  background-size: 25px 25px;
+  background-repeat: repeat;
+  overflow: hidden;
+}
+
+.card__item--monochromatic::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: inherit;
+  background-size: 25px 25px;
+  background-repeat: repeat;
+  mix-blend-mode: difference;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.card__item--monochromatic:hover::before {
+  opacity: 1;
+  /* Make the spinning layer visible on hover */
+  animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.card__item--iridescence-holographic {
+  background: var(--color-iridescence);
+}
+
+.stained-glass {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.glass-piece {
+  position: absolute;
+  width: 100%;
+  /* Adjust size to simulate border */
+  height: 100%;
+  background: hsla(var(--hue), 100%, 50%, 1);
+  transition: transform 0.5s ease;
+  opacity: 0.4;
+  filter: saturate(100000%);
+}
+
+/* Individual pieces adjustment */
+.stained-glass .glass-piece:nth-child(1) {
+  clip-path: polygon(50% 0%, 100% 0, 100% 100%, 50% 100%);
+}
+
+.stained-glass .glass-piece:nth-child(2) {
+  clip-path: polygon(0 0, 50% 0%, 50% 100%, 0% 100%);
+}
+
+.stained-glass .glass-piece:nth-child(3) {
+  clip-path: polygon(50% 50%, 100% 50%, 75% 100%, 25% 100%);
+}
+
+.stained-glass .glass-piece:nth-child(4) {
+  clip-path: polygon(0 50%, 50% 50%, 50% 100%, 0 100%);
+}
+
+.stained-glass .glass-piece:nth-child(5) {
+  clip-path: polygon(25% 0, 75% 0, 50% 50%);
+}
+
+.sun-stained-glass {
+  z-index: -2;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid yellow;
+  box-shadow: 0 0 50px 20px orange;
+  background-color: var(--color-sun);
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%, 50%);
+  animation: rise 15s infinite;
+  filter: blur(5px);
+  opacity: 0;
+  /* Start invisible */
+  pointer-events: none;
+  /* Ignore mouse events */
+  animation: none;
+  /* Prevent animation from starting automatically */
+}
+
+.stained-glass:hover .sun-stained-glass {
+  opacity: 1;
+  /* Make the sun visible on hover */
+  animation: rise 15s infinite;
+  /* Start the sun's rise animation */
+}
+
+@keyframes rise {
+  0% {
+    bottom: -50%;
+    box-shadow: 0 0 40px 30px orange;
+  }
+
+  15% {
+    box-shadow: 0 0 30px 35px orange;
+  }
+
+  35% {
+    bottom: 50%;
+    box-shadow: 0 0 50px 40px orange;
+  }
+
+  50% {
+    bottom: 50%;
+    box-shadow: 0 0 60px 30px orange;
+  }
+
+  75% {
+    box-shadow: 0 0 50px 25px orange;
+  }
+
+  100% {
+    bottom: -50%;
+    box-shadow: 0 0 40px 30px orange;
+  }
+}
+
+.card__item--perspective {
+  background-color: var(--color-perspective);
+  grid-column: span 2;
+  /* Ensure the container can handle mouse events for its children */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__item--perspective .box {
+  width: 200px;
+  height: 200px;
+  opacity: 1;
+  transition: 0.6s ease all;
+  border-radius: 2rem;
+  background: var(--color-box);
+  animation: anim 5s linear infinite;
+  animation-play-state: paused;
+  /* Animation is paused by default */
+}
+
+.card__item--perspective:hover .box {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  transform-style: preserve-3d;
+  pointer-events: none;
+
+  animation-play-state: running;
+  /* Animation is paused by default */
+}
+
+@keyframes anim {
+  0% {
+    transform: perspective(100px) rotateY(0deg) rotateX(0deg);
+  }
+
+  50% {
+    transform: perspective(50px) rotateY(180deg) rotateX(180deg);
+  }
+
+  100% {
+    transform: perspective(100px) rotateY(360deg) rotateX(360deg);
+  }
+}
+
+.card__item--gold-silver-metallic {
+  position: relative;
+  overflow: hidden;
+}
+
+.card__item--gold-silver-metallic::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  background: var(--color-monochrome-rings);
+  z-index: -1;
+  transform: rotate(0deg);
+  transition: transform 10s linear;
+  transform-origin: center center;
+  /* Ensures the rotation happens around the center */
+  background-size: cover;
+  /* Ensures the gradient covers the entire element */
+  width: 200%;
+  /* Enlarge to ensure smooth rotation */
+  height: 200%;
+}
+
+.card__item--gold-silver-metallic:hover::before {
+  transform: rotate(360deg);
+  /* Rotate upon hover */
+}
+
+.card__item--shadow {
+  background-color: var(--color-shadow);
+  transition: all 1s ease;
+}
+
+.card__item--mosaic {
+  background: var(--color-mosaic);
+  transition: 1s ease;
+}
+
+.card__item--mosaic:hover {
+  filter: hue-rotate(90deg);
+}
+
+.card__item--glitch {
+  background-color: #000000;
+  opacity: 1;
+  background-image: var(--color-glitch);
+  background-size: 66px 116px;
+  background-position: 0 0, 0 0, 33px 58px, 33px 58px, 0 0, 33px 58px;
+  transition: filter 0.5s ease;
+  /* Smooth transition for filter changes */
+}
+
+@keyframes glitchEffect {
+
+  0%,
+  100% {
+    background-position: 0 0, 0 0, 33px 58px, 33px 58px, 0 0, 33px 58px;
+    filter: hue-rotate(0deg);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    background-position: -5px 0, 5px 0, 38px 58px, 28px 58px, 5px 0, 38px 58px;
+    filter: hue-rotate(-10deg);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    background-position: 5px 0, -5px 0, 28px 58px, 38px 58px, -5px 0, 28px 58px;
+    filter: hue-rotate(10deg);
+  }
+}
+
+.card__item--glitch:hover {
+  animation: glitchEffect 1s infinite linear;
+}
+
+/* .card__item--red-blue {
+  background: linear-gradient(to right, var(--color-red), var(--color-blue));
+} */
+
+.circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  mix-blend-mode: screen;
+  transition: all 0.5s ease;
+  /* Add transition for smooth hover effect */
+  transform: translate(-50%, -50%);
+  /* Center the circles */
+}
+
+.circle--1 {
+  background-color: #c00;
+  z-index: 1;
+  /* Set z-index to ensure correct stacking */
+}
+
+.circle--2 {
+  background-color: #0c0;
+  z-index: 2;
+  /* Set z-index to ensure correct stacking */
+}
+
+.circle--3 {
+  background-color: #00c;
+  z-index: 3;
+  /* Set z-index to ensure correct stacking */
+}
+
+.grid__item-card:hover .circle--1 {
+  transform: translate(-50%, -50%) translateX(-35%) translateY(-20%) scale(120%);
+  /* Spread left on hover */
+}
+
+.grid__item-card:hover .circle--2 {
+  transform: translate(-50%, -50%) translateX(35%) translateY(-20%) scale(120%);
+  /* Spread right on hover */
+}
+
+.grid__item-card:hover .circle--3 {
+  transform: translate(-50%, -50%) translateY(35%) scale(120%);
+  /* Spread down on hover */
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.container .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Center the circles */
+}
+
+#starfield {
+  background: #000;
+}
+
+#starfield,
+.stars {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+#starfield:hover,
+.stars {
+  opacity: 1;
+  transition: 1.5s ease;
+}
+
+.stars {
+  background-image: var(--color-stars);
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  animation: zoom 5s infinite;
+  animation-timing-function: linear;
+  opacity: 0;
+}
+
+.stars:nth-child(1) {
+  --rotation: 30deg;
+  animation-delay: 0s;
+}
+
+.stars:nth-child(2) {
+  transform: rotate(-20deg);
+  --rotation: -74deg;
+  animation-delay: 1s;
+}
+
+.stars:nth-child(3) {
+  --rotation: -34deg;
+  animation-delay: 2s;
+}
+
+.stars:nth-child(4) {
+  --rotation: 64deg;
+  animation-delay: 3s;
+}
+
+.stars:nth-child(5) {
+  --rotation: 41deg;
+  animation-delay: 4s;
+}
+
+@keyframes zoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) rotate(var(--rotation));
+  }
+
+  85% {
+    opacity: 1;
+    transform: scale(1.8) rotate(var(--rotation));
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(2) rotate(var(--rotation));
+  }
+}
+
+.container-neon {
+  padding: 2vw;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  height: 100vh;
+  background: #222;
+  background-image: var(--color-neon);
+}
+
+.header-neon {
+  font-size: 6em;
+  line-height: 2em;
+  color: rgba(255, 246, 169);
+  font-family: "Sacramento", cursive;
+  text-align: center;
+}
+
+.grid__item-card:hover .header-neon {
+  font-size: 6em;
+  line-height: 2em;
+  text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500,
+    0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+  color: #fff6a9;
+  font-family: "Sacramento", cursive;
+  text-align: center;
+  animation: blink 3s infinite;
+  -webkit-animation: blink 3s infinite;
+}
+
+@-webkit-keyframes blink {
+
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
+  }
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500,
+      0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #fff6a9;
+  }
+}
+
+@keyframes blink {
+
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
+  }
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500,
+      0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #fff6a9;
+  }
+}
+
+.card__item--solar-lunar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 1s ease;
+  background-color: #0080ff;
+  /* Light background initially */
+}
+
+.card__item--solar-lunar:hover {
+  background-color: #001;
+  /* Dark background on hover */
+}
+
+.card__item--solar-lunar .sun,
+.card__item--solar-lunar .moon {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  transition: opacity 1s ease;
+  margin: auto;
+  /* Centering magic for absolute positioning */
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.card__item--solar-lunar .sun {
+  background: var(--color-sun);
+  /* Sun color */
+  opacity: 1;
+  /* Visible initially */
+  z-index: 1;
+}
+
+.card__item--solar-lunar:hover .sun {
+  opacity: 0;
+  /* Hide sun on hover */
+}
+
+.card__item--solar-lunar .moon {
+  background: #eef;
+  /* Moon color */
+  opacity: 0;
+  /* Hidden initially */
+  z-index: 2;
+  /* Above the sun when visible */
+}
+
+.card__item--solar-lunar:hover .moon {
+  opacity: 1;
+  /* Show moon on hover */
+}
+
+.card__item--solar-lunar .moonspot {
+  position: absolute;
+  background: #ccd;
+  border-radius: 50%;
+  transition: opacity 1s ease;
+}
+
+.card__item--solar-lunar .moonspot1 {
+  width: 15px;
+  height: 15px;
+  left: 15%;
+  /* Adjust based on moon size */
+  top: 35%;
+}
+
+.card__item--solar-lunar .moonspot2 {
+  width: 6px;
+  height: 6px;
+  left: 35%;
+  top: 65%;
+}
+
+.card__item--solar-lunar .cover {
+  position: absolute;
+  width: 100px;
+  /* Same as the moon to cover it fully initially */
+  height: 100px;
+  background-color: #0080ff;
+  /* Initially matches the sky */
+  border-radius: 50%;
+  transition: all 1s ease;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateX(50%) translateY(-50%);
+  /* Start from the top right */
+  opacity: 0;
+  /* Start fully transparent */
+  z-index: 3;
+  /* Ensure it's above the moon */
+}
+
+.card__item--solar-lunar:hover .cover {
+  opacity: 1;
+  /* Becomes opaque to create the crescent effect */
+  background-color: #001;
+  /* Color of the crescent in light mode */
+  transform: translate(35px,
+      -25px);
+  /* Moves to create the crescent shape on hover */
+}
+
+.card__item--shadow:hover .circleshadow {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  margin: 0 50px;
+  transition: all 1s ease;
+}
+
+.card__item--shadow:hover .circleshadow2 {
+  box-shadow: -10px -10px 30px #979dac, 10px 10px 30px #aeaec040,
+    inset -10px -10px 20px -5px #02040f, inset 10px 10px 10px -5px #7d8597;
+  transition: all 1s ease;
+}
